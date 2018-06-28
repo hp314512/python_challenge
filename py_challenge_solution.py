@@ -23,5 +23,15 @@ print (l)
 '''
 
 #3rd
-'''
-'''
+import time
+start = time.time()
+f = open('d:/python_challenge/3level.txt','r')
+rq = f.readlines()
+f.close()
+zf = ''.join(rq)
+t = 0
+zd = {i:zf.count(i) for i in zf}
+a = sorted(zd.items(),key = lambda x:x[1])
+print (a)
+end = time.time()
+print (end - start)
